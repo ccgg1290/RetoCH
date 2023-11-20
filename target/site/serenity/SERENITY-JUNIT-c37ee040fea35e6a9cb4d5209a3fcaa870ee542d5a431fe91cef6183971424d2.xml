@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Se intenta relizar una regresion de los servicios exitosos de registro, login y compra de un producto" skipped="0" tests="1" time="5.07" timestamp="2023-01-23 03:11:54"><testcase name="Com"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+stepdefinitions.MyDefinitions.compra2(MyDefinitions.java:113)&#13;
+✽.compra2(file:///C:/Users/cgualteros/Documents/Retos%20Choucair/Retos%20Choucair/AUTOMATIZACION/proyectos/prueba2/src/test/resources/features/prueba.feature:51)&#13;
+</system-err></testcase></testsuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Se intenta relizar una regresion de los servicios exitosos de registro, login y compra de un producto" skipped="0" tests="1" time="13.37" timestamp="2023-01-24 10:22:26"><testcase name="Verificar ingreso correcto"><failure message="&#13;&#10;Expected: &quot;Log out&quot;&#13;&#10;     but: was &quot;&quot;" type="java.lang.AssertionError">&#13;
+Expected: "Log out"&#13;
+     but: was ""</failure><system-err>&#13;
+Expected: "Log out"&#13;
+     but: was ""&#13;
+stepdefinitions.MyDefinitions.verificaQuePudoIngresarCorrectamenteYVeSuNombreEnElHomepage(MyDefinitions.java:73)&#13;
+✽.verifica que pudo ingresar correctamente y ve su nombre en el homepage(file:///C:/Users/cgualteros/Documents/Retos%20Choucair/Retos%20Choucair/AUTOMATIZACION/proyectos/prueba2/src/test/resources/features/prueba.feature:27)&#13;
+</system-err></testcase></testsuite>

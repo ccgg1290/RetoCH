@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Reto Project</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="319aea04536905dce8b697ab1eae150650d8e880afc664d7b20e16034fa96630.html">Se Intenta Relizar Una Regresion De Los Servicios Exitosos De Registro, Login Y Compra De Un Producto</a></span>
+                > <span class="truncate-60"><a
+                    href="b3f0541bc34acdddafc71e5193affd5334f466e9bee98826f851f4a38e01d028.html">comprar productos </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 20-01-2023 23:27</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Se Intenta Relizar Una Regresion De Los Servicios Exitosos De Registro, Login Y Compra De Un Producto </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="9ece88ab55cbe1a925e09383bf6afbb8a4b45d91a74d9bb51a6565ba94afd14e.html">Casocompra
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="a1a3ea4878672669fd991f477f0c440e5827f143a9b9c2d028a6d28f83355513.html">Historia De Usuario
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">comprar productos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="60cce11b7ec201f533926c1695192bab233d3e4fd840b566b63b61cfccb75f62.png" title=" Dado que un usuario  se encuentra en  el  home page" width="1920"/>
+                <img src="60cce11b7ec201f533926c1695192bab233d3e4fd840b566b63b61cfccb75f62.png" title=" Cristian opens the https://www.demoblaze.com/" width="1920"/>
+                <img src="60cce11b7ec201f533926c1695192bab233d3e4fd840b566b63b61cfccb75f62.png" title=" Dado que un usuario  se encuentra en  el  home page (completed)" width="1920"/>
+                <img src="5f886a651c868e29176257a2212a6921a1b0cc3edf3f4d164c7bffb3bd4ecaf7.png" title=" Cuando Se dirige al modulo phones y escoge un producto para comprar" width="1920"/>
+                <img src="5f886a651c868e29176257a2212a6921a1b0cc3edf3f4d164c7bffb3bd4ecaf7.png" title=" Cristian comprar product" width="1920"/>
+                <img src="5f886a651c868e29176257a2212a6921a1b0cc3edf3f4d164c7bffb3bd4ecaf7.png" title=" Cristian clicks on modulo phones" width="1920"/>
+                <img src="5f886a651c868e29176257a2212a6921a1b0cc3edf3f4d164c7bffb3bd4ecaf7.png" title=" Cristian clicks on articulo phones" width="1920"/>
+                <img src="7b46d9d3edd1a975fe053e5d44840e58b27e9ab9e8cc5e14bb56c21902eafa8b.png" title=" Cristian clicks on articulo phones (completed)" width="1920"/>
+                <img src="6db71d6f42d6db1c4b76ad323bcd117ab71b2070f38c0efff7b16beb46b65f14.png" title=" Cristian clicks on agreagr al carrito" width="1920"/>
+                <img src="8f342e97980e6779f9a55c8391292821e8385d8a3058d4b5fef7e77fda746c47.png" title=" Cristian clicks on agreagr al carrito (completed)" width="1920"/>
+                <img src="ceddadfcc26589a77af3f66fcf684f687328d4c8196d806095ff11ad7b25584a.png" title=" Cristian clicks on navcart" width="1920"/>
+                <img src="930b67157e847dbed600dcd5fe05554ce98029c91aefcfee19539a4a1af7cc39.png" title=" Cristian clicks on navcart (completed)" width="1920"/>
+                <img src="930b67157e847dbed600dcd5fe05554ce98029c91aefcfee19539a4a1af7cc39.png" title=" Cristian clicks on placeorder" width="1920"/>
+                <img src="365b2b2db5883cc1f143a1fe04992f3312d32ed94c66b346b85182586c001dad.png" title=" Cristian clicks on placeorder (completed)" width="1920"/>
+                <img src="d8dcaf028420c47903eb90ba7ddb1490ccaf92fc194f65af30d07baf3cf1d736.png" title=" Cristian enters 'cristian' into usuario" width="1920"/>
+                <img src="0fb3325fa091808ae5eb7ba4237d03c1e8d46de27971a5bc79e636581b4d12c3.png" title=" Cristian enters 'cristian' into usuario (completed)" width="1920"/>
+                <img src="0fb3325fa091808ae5eb7ba4237d03c1e8d46de27971a5bc79e636581b4d12c3.png" title=" Cristian enters 'Colombia' into pais" width="1920"/>
+                <img src="1d78973f25c96d2e8a778143b409c1b18bd992c34f63b19f0a0c123c6e5b4d61.png" title=" Cristian enters 'Colombia' into pais (completed)" width="1920"/>
+                <img src="1d78973f25c96d2e8a778143b409c1b18bd992c34f63b19f0a0c123c6e5b4d61.png" title=" Cristian enters 'Bogota' into ciudad" width="1920"/>
+                <img src="c21e08b5f1bd170c5603fb07d873de37699e12218b3d5e56563d13f12107c60f.png" title=" Cristian enters 'Bogota' into ciudad (completed)" width="1920"/>
+                <img src="c21e08b5f1bd170c5603fb07d873de37699e12218b3d5e56563d13f12107c60f.png" title=" Cristian enters '1548847' into tarjeta" width="1920"/>
+                <img src="a881730921d7b0cfc979a99585a14d62f9f2b91ee35e777b759a1079f19dfee6.png" title=" Cristian enters '1548847' into tarjeta (completed)" width="1920"/>
+                <img src="a881730921d7b0cfc979a99585a14d62f9f2b91ee35e777b759a1079f19dfee6.png" title=" Cristian enters '10' into mes" width="1920"/>
+                <img src="593c7ca32a8a528948f8ec108dd304d5364a51079bb71c6ba6050fbc6dba5a0a.png" title=" Cristian enters '10' into mes (completed)" width="1920"/>
+                <img src="593c7ca32a8a528948f8ec108dd304d5364a51079bb71c6ba6050fbc6dba5a0a.png" title=" Cristian enters '2022' into ano" width="1920"/>
+                <img src="a6f52de0d1dfb1664c1eca3f0fe09fd31e96c29bab1ed526bb920493b40ca6fe.png" title=" Cristian enters '2022' into ano (completed)" width="1920"/>
+                <img src="a6f52de0d1dfb1664c1eca3f0fe09fd31e96c29bab1ed526bb920493b40ca6fe.png" title=" Cristian clicks on comprar" width="1920"/>
+                <img src="961fbc1722d30d9780854d05f2dfc4f6827cd276469f3ec6f96e6e8bb5f235c2.png" title=" Cristian clicks on comprar (completed)" width="1920"/>
+                <img src="a66d79b4c76dd074d0f6d7974571992e1477f13874b3b5664977c93b1251431a.png" title=" Cristian clicks on okcompra" width="1920"/>
+                <img src="60cce11b7ec201f533926c1695192bab233d3e4fd840b566b63b61cfccb75f62.png" title=" Cristian clicks on okcompra (completed)" width="1920"/>
+                <img src="52c4be81fc0d24e68e51d393ea695a865fe8e7147de9248587ce094f2292fba3.png" title=" Cristian comprar product (completed)" width="1920"/>
+                <img src="52c4be81fc0d24e68e51d393ea695a865fe8e7147de9248587ce094f2292fba3.png" title=" Cuando Se dirige al modulo phones y escoge un producto para comprar (completed)" width="1920"/>
+                <img src="52c4be81fc0d24e68e51d393ea695a865fe8e7147de9248587ce094f2292fba3.png" title=" Entonces realiza la compra" width="1920"/>
+                <img src="52c4be81fc0d24e68e51d393ea695a865fe8e7147de9248587ce094f2292fba3.png" title=" Then cuando el boton log in esta habilitado su texto  should be 'Log in'" width="1920"/>
+                <img src="52c4be81fc0d24e68e51d393ea695a865fe8e7147de9248587ce094f2292fba3.png" title=" Entonces realiza la compra (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.6.0</span>
+</div>
+</body>
+</html>
